@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+	  <link rel="stylesheet" href="css/noteForm.css">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <!-- START NAV -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="../">
+            <img src="../images/bulma.png" alt="Logo">
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active">Home</a>
+            <a class="navbar-item">Examples</a>
+            <a class="navbar-item">Features</a>
+            <a class="navbar-item">Team</a>
+            <a class="navbar-item">Archives</a>
+            <a class="navbar-item">Help</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Account</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">Dashboard</a>
+                <a class="navbar-item">Profile</a>
+                <a class="navbar-item">Settings</a>
+                <hr class="navbar-divider">
+                <div class="navbar-item">Logout</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAV -->    
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="columns is-8 is-variable ">
+            <div class="column is-two-thirds has-text-left">
+              <h1 class="title is-1">Contact Us</h1>
+              <button id="getNotes" onclick="getNotes()">See Notes</button>
+              <a href="viewNotes.html"><button >View Notes</button></a>
+              <p class="is-size-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eligendi soluta
+                voluptate facere molestiae consequatur.</p>
+              <div class="social-media">
+                <a href="https://facebook.com" target="_blank" class="button is-light is-large"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="https://instagram.com" target="_blank" class="button is-light is-large"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://twitter.com" target="_blank" class="button is-light is-large"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <div class="column is-one-third has-text-left">
+              <div class="field">
+                <label class="label">Title</label>
+                <div class="control">
+                  <input class="input is-medium" type="text" id="noteTitle">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Note</label>
+                <div class="control">
+                  <textarea class="textarea is-medium" id="noteText"></textarea>
+                </div>
+              </div>
+              <div class="control">
+                <button class="button is-link is-fullwidth has-text-weight-medium is-medium" onclick="handleNoteSubmit()">Create Note</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+
+</html>
