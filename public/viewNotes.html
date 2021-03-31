@@ -19,7 +19,7 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <script src="js/index.js"></script>
+    <script src="js/renderNotes.js"></script>
   </head>
   <body>
 
@@ -69,11 +69,65 @@
             <h1 class="title" style="color: ghostwhite;">Bulma Card Layout Template</h1><br>
           </div>
         </div>
-        <div id="app" class="row columns is-multiline">
+        <div id="app" class="columns is-multiline">
 
-        </div>
+          <!-- <div class="column is-one-quarter">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  Note Title
+                </p>
+              </header>
+            </div>
+          </div>
+          <div class="column is-one-quarter">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  Note Title
+                </p>
+              </header>
+            </div>
+          </div>
+          <div class="column is-one-quarter">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  Note Title
+                </p>
+              </header>
+            </div>
+          </div>
+          <div class="column is-one-quarter">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  Note Title
+                </p>
+              </header>
+            </div>
+          </div>
+          <div class="column is-one-quarter">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  Note Title
+                </p>
+              </header>
+            </div>
+          </div>
+          <div class="column is-one-quarter">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">
+                  Note Title
+                </p>
+              </header>
+            </div>
+          </div> -->
+
+
       </div>
-    </div>
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
@@ -90,18 +144,6 @@
         </div>
       </div>
     </footer>
-
-    <script src="../js/cardsData.js"></script>
-
-    <!-- Using Vue to populate cards to reduce redundant code -->
-    <script>
-      var app = new Vue({
-        el: '#app',
-        data: {
-          cardData: cardsData
-        }
-      })
-
     </script>
   </body>
 

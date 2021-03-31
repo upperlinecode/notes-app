@@ -23,27 +23,3 @@ const handleNoteSubmit = () => {
     console.log('Note Submitted')
   });
 }
-
-const getNotes = () => {
-  const notesRef = firebase.database().ref('users');
-  notesRef.on('value', (snapshot) => {
-    const data = snapshot.val();
-    renderDataAsHtml(data)
-  })
-}
-
-const renderDataAsHtml = data => {
-  console.log('DATA', data);
-  let innerHTML = "";
-  for(const user in data) {
-    console.log('User data', data[user])
-    for(const noteItem in data[user]) {
-      console.log('Note item', data[user][noteItem])
-      const note = data[user][noteItem];
-      innerHTML += `<h1>Note Title: ${note.title}</h1>`;
-      innerHTML += `<p>${note.text}</p>`
-    }
-  }
-
-  document.getElementById('app').innerHTML = innerHTML;
-}
