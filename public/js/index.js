@@ -13,13 +13,15 @@ window.onload = (event) => {
 };
 
 const handleNoteSubmit = () => {
-  const noteTitle = document.getElementById('noteTitle').value;
-  const noteText = document.getElementById('noteText').value;
+  const noteTitle = document.getElementById('noteTitle');
+  const noteText = document.getElementById('noteText');
 
   firebase.database().ref(`users/${firebase_user.uid}`).push({
-    title: noteTitle,
-    text: noteText
+    title: noteTitle.value,
+    text: noteText.value
   }).then(() => {
-    console.log('Note Submitted')
+    console.log('helloooo')
+    noteTitle.value = "";
+    noteText.value = "";
   });
 }

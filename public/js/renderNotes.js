@@ -6,18 +6,17 @@ window.onload = (event) => {
       getNotes();
     } else {
       window.location = 'index.html'; // If not logged in, navigate back to login page.
-    }
+    };
   });
 };
 
 const getNotes = () => {
-  console.log('test')
   const notesRef = firebase.database().ref('users');
   notesRef.on('value', (snapshot) => {
     const data = snapshot.val();
-    renderDataAsHtml(data)
-  })
-}
+    renderDataAsHtml(data);
+  });
+};
 
 const renderDataAsHtml = data => {
   console.log('DATA', data);
@@ -27,13 +26,12 @@ const renderDataAsHtml = data => {
     for(const noteItem in data[user]) {
       const note = data[user][noteItem];
       cards += createCard(note)
-    }
-  }
+    };
+  };
   document.getElementById('app').innerHTML = cards;
-}
+};
 
 const createCard = (note) => {
-  console.log('test')
   let innerHTML = "";
   innerHTML += `<div class="column is-one-quarter">`
   innerHTML += `<div class="card">`

@@ -22,121 +22,28 @@
     <script src="js/renderNotes.js"></script>
   </head>
   <body>
-
-    <!-- START NAV -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="#">
-            <img src="https://cdn.emk.dev/templates/bulma-logo-light.png" alt="Logo">
-          </a>
-          <span class="navbar-burger burger" data-target="navbarMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-        <div id="navbarMenu" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item is-active">
-              Home
-            </a>
-            <a class="navbar-item">
-              Examples
-            </a>
-            <a class="navbar-item">
-              Features
-            </a>
-            <a class="navbar-item">
-              Team
-            </a>
-            <a class="navbar-item">
-              Archives
-            </a>
-            <a class="navbar-item">
-              Help
-            </a>
-          </div>
-        </div>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-menu">
+        <a class="navbar-item" href="noteForm.html">
+          Add a new note
+        </a>
       </div>
     </nav>
-    <!-- END NAV -->
-
     <div class="container">
       <div class="section">
         <div class="columns">
           <div class="column has-text-centered">
-            <h1 class="title" style="color: ghostwhite;">Bulma Card Layout Template</h1><br>
+            <h1 class="title">Your Streams of Consciousness</h1><br>
           </div>
         </div>
         <div id="app" class="columns is-multiline">
-
-          <!-- <div class="column is-one-quarter">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  Note Title
-                </p>
-              </header>
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  Note Title
-                </p>
-              </header>
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  Note Title
-                </p>
-              </header>
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  Note Title
-                </p>
-              </header>
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  Note Title
-                </p>
-              </header>
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title">
-                  Note Title
-                </p>
-              </header>
-            </div>
-          </div> -->
-
-
+          <!-- Note cards will render here -->
+        </div>
       </div>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <div class="soc">
-            <a href="#"><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-          </div>
           <p>
             <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>.
             The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. <br>
@@ -144,7 +51,6 @@
         </div>
       </div>
     </footer>
-    </script>
   </body>
 
 </html>

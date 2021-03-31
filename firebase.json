@@ -15,7 +15,7 @@
       "port": 8008
     },
     "database": {
-      "port": 9000
+      "port": 9002
     },
     "hosting": {
       "port": 9001
